@@ -12,7 +12,7 @@ const
 coroutine(function* (){
   let
     parse = require('dotenv').parse,
-    valuesFromFile = parse(fs.readFileSync('./env')),
+    valuesFromFile = parse(fs.readFileSync('.env')),
     outputFile = './browser-env.js',
     result = [],
     fileExists = yield exists(outputFile)
