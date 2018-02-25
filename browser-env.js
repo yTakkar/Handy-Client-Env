@@ -2,7 +2,7 @@
 
 const
   fs = require('fs'),
-  { success } = require('handy-log'),
+  { success, error } = require('handy-log'),
   { promisify } = require('util'),
   { coroutine } = require('bluebird'),
   append = promisify(fs.appendFile),
@@ -19,6 +19,9 @@ coroutine(function* (){
 
   if (fileExists) {
     deleteFile(outputFile)
+  } else {
+    error('.Env file is missing in this directory!!')
+    return
   }
 
   for (const elem in valuesFromFile) {
