@@ -2,18 +2,24 @@
 
 const
   fs = require('fs'),
-  { success } = require('handy-log'),
+  { success, error } = require('handy-log'),
   { promisify } = require('util'),
   { coroutine } = require('bluebird'),
+  srcFile = './.env',
+  outputFile = './browser-env.js',
   append = promisify(fs.appendFile),
   exists = promisify(fs.exists),
   deleteFile = promisify(fs.unlink)
 
+if (!fs.existsSync(srcFile)) {
+  error('.Env file is missing!!')
+  return
+}
+
 coroutine(function* (){
   let
     parse = require('dotenv').parse,
-    valuesFromFile = parse(fs.readFileSync('./.env')),
-    outputFile = './browser-env.js',
+    valuesFromFile = parse(fs.readFileSync(srcFile)),
     result = [],
     fileExists = yield exists(outputFile)
 
@@ -27,7 +33,7 @@ coroutine(function* (){
 
   yield append(outputFile, `module.exports = ${JSON.stringify(valuesFromFile, null, 2)}`)
 
-  success('Successfully created a ./browser-env.js file.')
+  success(`Successfully created a ${outputFile} file.`)
 
 })()
 
