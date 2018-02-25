@@ -25,8 +25,7 @@ coroutine(function* (){
     result[elem] = valuesFromFile[elem]
   }
 
-  yield append(outputFile, 'module.exports = ')
-  yield append(outputFile, JSON.stringify(valuesFromFile, null, 2))
+  yield append(outputFile, `module.exports = ${JSON.stringify(valuesFromFile, null, 2)}`)
 
   success('Successfully created a ./browser-env.js file.')
 
