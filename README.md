@@ -2,7 +2,7 @@
 
 A package which takes all the environment variables from `.env` file and outputs them in a JS file `browser-env.js`.
 
-![GIF]('./GIF.gif)
+![GIF](https://raw.githubusercontent.com/yTakkar/Handy-Browser-Env/master/GIF.gif)
 
 # Motivation
 Created this project for front-end layer of the project to get access to environment variables defined in a `.env` file.
