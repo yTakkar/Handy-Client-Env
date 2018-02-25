@@ -1,7 +1,7 @@
 {
   "name": "handy-browser-env",
   "version": "1.0.6",
-  "description": "A package which takes all the environment variables from .env file and outputs JS file containing all env vars",
+  "description": "A package which takes all the environment variables from .env file and outputs them in a JS file",
   "main": "browser-env.js",
   "scripts": {},
   "repository": {
