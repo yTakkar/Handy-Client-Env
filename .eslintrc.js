@@ -4,12 +4,8 @@ module.exports = {
     "node": true
   },
   "extends": "eslint:recommended",
-  'parser': 'babel-eslint',
   'parserOptions': {
     'ecmaVersion': 2017,
-    'ecmaFeatures': {
-      'experimentalObjectRestSpread': true
-    },
     'sourceType': 'module'
   },
   "rules": {
