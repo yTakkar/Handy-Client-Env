@@ -1,6 +1,6 @@
 # Handy-Browser-Env
 
-A package which takes all the environment variables from `.env` file and outputs them in a JS file `browser-env.js`.
+Command-line tool which Loads environment variables from .env file and outputs them in a JS file!!`.
 
 ![GIF](https://raw.githubusercontent.com/yTakkar/Handy-Browser-Env/master/GIF.gif)
 
