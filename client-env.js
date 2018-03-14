@@ -5,7 +5,7 @@ const
   { success, error } = require('handy-log'),
   parse = require('dotenv').parse,
   srcFile = './.env',
-  outputFile = './browser-env.js'
+  outputFile = './env.js'
 
 if (!fs.existsSync(srcFile)) {
   error('.Env file is missing!!')
