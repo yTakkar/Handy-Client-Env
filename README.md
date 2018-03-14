@@ -2,7 +2,7 @@
 
 Command-line tool which Loads environment variables from .env file and outputs them in a JS file!!`.
 
-![GIF](https://raw.githubusercontent.com/yTakkar/Handy-Client-Env/master/GIF.gif)
+![GIF](https://raw.githubusercontent.com/yTakkar/Handy-Client-Env/master/gif-image.gif)
 
 # Motivation
 Created this project for front-end layer of the project to get access to environment variables defined in a `.env` file.
