@@ -1,6 +1,6 @@
 {
   "name": "handy-client-env",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Loads environment variables from .env file and outputs them in a JS file!!",
   "main": "client-env.js",
   "scripts": {},
