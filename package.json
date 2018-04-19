@@ -21,6 +21,5 @@
   "devDependencies": {
     "eslint": "^4.18.1"
   },
-  "preferGlobal": true,
   "bin": "./client-env.js"
 }
