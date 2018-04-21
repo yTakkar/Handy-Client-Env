@@ -3,7 +3,11 @@
   "version": "1.0.14",
   "description": "Loads environment variables from .env file and outputs them in a JS file!!",
   "main": "client-env.js",
-  "scripts": {},
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "test:coverage": "jest --coverage"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yTakkar/Handy-Client-Env.git"
@@ -16,10 +20,12 @@
   "homepage": "https://github.com/yTakkar/Handy-Client-Env#readme",
   "dependencies": {
     "dotenv": "^5.0.0",
-    "handy-log": "^1.0.3"
+    "handy-log": "^1.0.3",
+    "lodash": "^4.17.5"
   },
   "devDependencies": {
-    "eslint": "^4.18.1"
+    "eslint": "^4.18.1",
+    "jest": "^22.4.3"
   },
   "bin": "./client-env.js"
 }
