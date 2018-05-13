@@ -1,4 +1,3 @@
-/* eslint no-undef:0 */
 const fs = require('fs')
 const { join } = require('path')
 const { isEqual } = require('lodash')
@@ -10,13 +9,16 @@ describe('Sweet tests', () => {
     let values = `username="takkar"
 password="iamaverydifficultpassword"
     `
+
     fs.appendFileSync('./.env', values)   // create .env with above values
-    require('./client-env')   // let client-env do something nice :)
-    let inputValues = {       // values to be compared
+    require('./client-env')               // let client-env do something nice :)
+
+    let inputValues = {                   // values to be compared
       username: 'takkar',
       password: 'iamaverydifficultpassword'
     }
     let outputValues = require('./env.js')    // require values from env.js
+
     expect(
       isEqual(inputValues, outputValues)
     ).toBe(true)

@@ -8,6 +8,14 @@ module.exports = {
     'ecmaVersion': 2017,
     'sourceType': 'module'
   },
+  'globals': {
+    'describe': true,
+    'test': true,
+    'it': true,
+    'expect': true,
+    'beforeAll': true,
+    'afterAll': true
+  },
   "rules": {
     "indent": [
       "error", 2
